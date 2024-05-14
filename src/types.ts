@@ -1,0 +1,3 @@
+interface iForms {
+    id: number
+}

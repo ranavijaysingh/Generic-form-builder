@@ -3,12 +3,13 @@ interface IButtonProps {
   onClick?: () => void;
 }
 
-function Button(props: IButtonProps) {
+export default function Button(props: IButtonProps) {
   return (
-    <button className="bg-black p-2 text-white" type="button" onClick={props?.onClick}>
-      {props.text}
-    </button>
+    //  <div className="flex justify-end items-center bg-zinc-200 p-4">
+      <button className="bg-black text-white px-4 py-2 rounded h-full" type="button" onClick={props?.onClick}>
+            {props.text}
+      </button>
+    //  </div>
+    
   );
 }
-
-export default Button;
