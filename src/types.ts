@@ -1,3 +1,5 @@
-interface iForms {
-    id: number
+export interface IForms {
+  id?: number;
+  name: string;
+  modifiedDate: string;
 }
