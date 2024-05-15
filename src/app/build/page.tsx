@@ -2,17 +2,22 @@
 
 import Navbar from "@/components/common/navbar";
 import Sidebar from "@/components/common/sidebar";
-import Button from "@/components/common/button";
 import BuildLayout from "@/layouts/build";
+import { useState } from "react";
 
 export default function Page() {
+
+  const [state, setState] = useState(1)
+  const newFormClick = () => {
+      setState(2);
+    };
 
   return (
     <div>
       <Navbar />
       <div className="flex flex-row w-full">
         <Sidebar />
-        <BuildLayout />
+        <BuildLayout onClick={newFormClick} state={state}/>
       </div>
     </div>
   );
