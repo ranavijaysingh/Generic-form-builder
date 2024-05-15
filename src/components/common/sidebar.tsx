@@ -1,7 +1,7 @@
 export default function Sidebar() {
   return (
     <div className="flex h-screen">
-      <div className="w-16 bg-gray-400 mt-2 text-black flex flex-col items-center py-4">
+      <div className="w-16 bg-gray-400  text-black flex flex-col items-center py-4">
         <div className="mb-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"

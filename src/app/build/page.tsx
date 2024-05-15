@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-row">
+      <div className="flex flex-row w-full">
         <Sidebar />
         <BuildLayout />
       </div>

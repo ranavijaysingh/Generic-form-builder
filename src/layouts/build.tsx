@@ -5,12 +5,13 @@ export default function BuildLayout() {
         alert("new form");
       };
     return (
-        <div className="w-[100%] flex flex-col ml-2 bg-gray-400">
-            <div className="flex flex-row" >
-            <div className="bg-gray-400" >My Forms</div>
-            <Button text={'New Form'} onClick={handleClick}></Button>
+        <div className="w-full flex flex-col ml-2 bg-gray-400">
+            <div className="flex flex-row w-full justify-between p-2">
+                <div className="bg-gray-400" >My Forms</div>
+                <Button text={'New Form'} onClick={handleClick}></Button>
+                
             </div>
-            
+            <hr></hr>
         </div>
     )
 };
