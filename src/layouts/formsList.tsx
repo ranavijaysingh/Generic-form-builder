@@ -11,8 +11,8 @@ function FormsList(props: IFormsListProps) {
 
   return (
     <div className="flex flex-col w-full gap-2 p-5">
-      {forms.map((form) => (
-        <List formName={form.name} date={form.modifiedDate} />
+      {forms.map((form, index) => (
+        <List formName={form.name} key={index} date={form.modifiedDate} />
       ))}
     </div>
   );

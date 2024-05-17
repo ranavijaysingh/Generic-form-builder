@@ -16,4 +16,15 @@ export const Forms = [
   },
 ];
 
-
+export const FormChoose = [
+  {
+    id: 1,
+    text: "Create from SCRATCH",
+    btnType: "open"
+  },
+  {
+    id: 2,
+    text: "USE TEMPLATES",
+    btnType: "open"
+  }
+]

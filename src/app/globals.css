@@ -21,8 +21,25 @@ body {
   background: var(--foreground-rgb); 
 }
 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.btnGroup{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.dot{
+  width: 20px;
+  height: 20px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  float: inline-end;
+  margin: 7px;
 }

@@ -9,7 +9,7 @@ export default function Page() {
 
   const [state, setState] = useState(1)
   const newFormClick = () => {
-      setState(2);
+      setState(state+1);
     };
 
   return (

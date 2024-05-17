@@ -22,8 +22,7 @@ interface IButtonProps {
 } 
 
 export default function Button(props: IButtonProps) {
-      return (<div>
-        {btnTypeDecide(props)}
-      </div>
-      );
+      return (<>
+                {btnTypeDecide(props)}
+      </>);
 }
