@@ -3,6 +3,7 @@
 import Navbar from "@/components/common/navbar";
 import Sidebar from "@/components/common/sidebar";
 import BuildLayout from "@/layouts/build";
+import Builder from "@/layouts/builder";
 import { useState } from "react";
 
 export default function Page() {
@@ -16,8 +17,9 @@ export default function Page() {
     <div>
       <Navbar />
       <div className="flex flex-row w-full">
-        <Sidebar />
-        <BuildLayout onClick={newFormClick} state={state}/>
+        {/* <Sidebar /> */}
+        {/* <BuildLayout onClick={newFormClick} state={state}/> */}
+        <Builder />
       </div>
     </div>
   );

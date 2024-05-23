@@ -28,3 +28,26 @@ export const FormChoose = [
     btnType: "open"
   }
 ]
+
+export const BuilderToolbarData = [
+  {
+  id: 1,
+  text: 'Builder',
+  },
+  {
+    id: 1,
+    text: 'Import',
+  },
+  {
+    id: 1,
+    text: 'Setting',
+  },
+  {
+    id: 1,
+    text: 'Builder',
+  },
+  {
+    id: 1,
+    text: 'Builder',
+  }
+]

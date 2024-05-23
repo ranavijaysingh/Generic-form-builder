@@ -17,6 +17,10 @@ interface IButtonProps {
       <button className=" text-white px-2 py-2  h-full" type="button" onClick={props?.onClick}>
         {props.text.toUpperCase()}
       </button>)
+    case "toolTopOpen":
+      return (
+        <button className="px-4 py-2" type="button">{props.text}</button>
+      )
       break;
   }
 } 

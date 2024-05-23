@@ -1,4 +1,4 @@
-import Styles from '../../layouts/build.module.css'
+
 
 interface IScratchForm {
     formType: string;
