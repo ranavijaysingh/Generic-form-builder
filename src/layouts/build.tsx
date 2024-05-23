@@ -22,7 +22,7 @@ export default function BuildLayout(props: IBuildProps) {
         <>
           <div className="flex flex-row w-full p-2 justify-between">
             <div>My Forms</div>
-            <Button text={"New Form"}  btnType="closed" onClick={props?.onClick}></Button>
+            <Button text={"New Form"}  active={false} btnType="closed" onClick={props?.onClick}></Button>
           </div>
           <hr></hr>
           <FormsList forms={Forms} />
@@ -31,8 +31,8 @@ export default function BuildLayout(props: IBuildProps) {
       {/* Step2 */}
       {props.state == 2 && ( <> 
             <div className="btnGroup">
-              <Button text="Create from SCRATCH |" btnType="open"/>
-              <Button text="USE TEMPLATES" btnType="open"/>
+              <Button text="Create from SCRATCH |" active={false} btnType="open"/>
+              <Button text="USE TEMPLATES" active={false} btnType="open"/>
               
             </div>
             <hr></hr>

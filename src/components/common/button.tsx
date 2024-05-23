@@ -1,9 +1,8 @@
-interface IButtonProps {
-  text: string;
-  onClick?: () => void;
-  btnType: string
-}
- export function btnTypeDecide(props: IButtonProps) {
+import { IButtonProps } from "@/types";
+import BuilderToolbar from "@/containers/builderToolbar";
+
+export function btnTypeDecide(props: IButtonProps) {
+  const activeBtnStyle ="bg-zinc-500 text-white rounded"
   switch(props.btnType)
   {
     case "closed": 
@@ -19,7 +18,7 @@ interface IButtonProps {
       </button>)
     case "toolTopOpen":
       return (
-        <button className="px-4 py-2" type="button">{props.text}</button>
+        <button className={`${props.active && activeBtnStyle} px-4 py-2`} type="button" onClick={props?.onClick}>{props.text}</button>
       )
       break;
   }

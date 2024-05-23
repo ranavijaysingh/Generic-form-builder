@@ -33,21 +33,37 @@ export const BuilderToolbarData = [
   {
   id: 1,
   text: 'Builder',
+  active: true
   },
   {
-    id: 1,
+    id: 2,
     text: 'Import',
+    active: false
   },
   {
-    id: 1,
-    text: 'Setting',
+    id: 3,
+    text: 'Settings',
+    active: false
   },
   {
-    id: 1,
-    text: 'Builder',
+    id: 4,
+    text: 'Themes',
+    active: false
   },
   {
-    id: 1,
-    text: 'Builder',
+    id: 5,
+    text: 'Use Templates',
+    active: false
+  }
+  ,
+  {
+    id: 6,
+    text: 'Download',
+    active: false
+  },
+  {
+    id: 7,
+    text: 'Clear',
+    active: false
   }
 ]
