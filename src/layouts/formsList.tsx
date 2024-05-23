@@ -1,6 +1,5 @@
 import List from "@/components/common/list";
-import { Forms } from "@/mockData";
-import { IForms } from "@/types";
+import { IForms } from "@/types/formsTypes";
 
 interface IFormsListProps {
   forms: IForms[];
