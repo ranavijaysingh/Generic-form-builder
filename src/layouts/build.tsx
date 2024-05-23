@@ -2,6 +2,8 @@ import Button from "@/components/common/button";
 import React, { useState } from "react";
 import FormsList from "./formsList";
 import { Forms } from "@/mockData";
+import FormTemplate from "./formTemplate";
+import Styles from "./build.module.css";
 
 interface IBuildProps {
   state: number;
@@ -9,6 +11,8 @@ interface IBuildProps {
 }
 
 export default function BuildLayout(props: IBuildProps) {
+  const [isFormType, setIsFormType] = useState("");
+
   return (
     <div className="w-full flex flex-col ml-2 bg-gray-400">
       {/* Step1 */}
@@ -16,7 +20,11 @@ export default function BuildLayout(props: IBuildProps) {
         <>
           <div className="flex flex-row w-full p-2 justify-between">
             <div>My Forms</div>
-            <Button text={"New Form"} onClick={props?.onClick}></Button>
+            <Button
+              text={"New Form"}
+              btnType="closed"
+              onClick={props?.onClick}
+            ></Button>
           </div>
           <hr></hr>
           <FormsList forms={Forms} />
@@ -25,15 +33,16 @@ export default function BuildLayout(props: IBuildProps) {
       {/* Step2 */}
       {props.state == 2 && (
         <>
-          <div className="flex flex-row justify-center w-full">
-            <div>CREATE FROM SCRATCH | </div>
-            <div>USE TEMPLATES</div>
+          <div className="btnGroup">
+            <Button text="Create from SCRATCH |" btnType="open" />
+            <Button text="USE TEMPLATES" btnType="open" />
           </div>
           <hr></hr>
-          {/* Step3 */}
-          <div></div>
+          <FormTemplate isFormType={isFormType} setIsFormType={setIsFormType} />
         </>
       )}
+
+      {/* Step3 */}
     </div>
   );
 }

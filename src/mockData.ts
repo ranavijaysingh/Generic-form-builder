@@ -16,4 +16,38 @@ export const Forms = [
   },
 ];
 
+export const FormChoose = [
+  {
+    id: 1,
+    text: "Create from SCRATCH",
+    btnType: "open"
+  },
+  {
+    id: 2,
+    text: "USE TEMPLATES",
+    btnType: "open"
+  }
+]
 
+export const BuilderToolbarData = [
+  {
+  id: 1,
+  text: 'Builder',
+  },
+  {
+    id: 1,
+    text: 'Import',
+  },
+  {
+    id: 1,
+    text: 'Setting',
+  },
+  {
+    id: 1,
+    text: 'Builder',
+  },
+  {
+    id: 1,
+    text: 'Builder',
+  }
+]
