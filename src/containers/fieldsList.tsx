@@ -3,7 +3,7 @@ import FieldLabel from "@/components/common/fieldLabel";
 import { useState } from "react";
 import { IFieldLabel } from "@/types/fieldTypes";
 
-export default function BuilderForms() {
+export default function FieldsList() {
   const [fields, setFields] = useState<IFieldLabel[]>(initialFields);
 
   return (
