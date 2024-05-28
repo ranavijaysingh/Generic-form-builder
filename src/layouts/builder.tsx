@@ -1,5 +1,5 @@
 import BuilderToolbar from "@/containers/builderToolbar";
-import FieldsList from "@/containers/FieldsList";
+import FieldsList from "@/containers/fieldsList";
 import FormCanvas from "@/containers/formCanvas";
 
 export default function Builder() {

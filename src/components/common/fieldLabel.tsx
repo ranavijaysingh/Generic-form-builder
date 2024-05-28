@@ -4,16 +4,13 @@ import { useContext } from "react";
 import { FaWineGlassEmpty } from "react-icons/fa6";
 
 export default function FieldLabel(props: IFieldLabel) {
-  const { id, type, name, icon } = props;
+  const { type, name, icon } = props;
   const { dispatch } = useContext(FieldContext);
 
   const handleAddForm = () => {
     const field = {
       type: type,
       name: name,
-      required: false,
-      value: "",
-      placeholder: "",
     };
     dispatch({ type: "ADD_FIELD", payload: field });
   };

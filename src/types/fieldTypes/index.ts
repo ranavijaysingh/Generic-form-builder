@@ -2,15 +2,16 @@ export interface IField {
   id?: number;
   type: string;
   name: string;
-  required: boolean;
-  placeholder: string;
-  value: string;
+  required?: boolean;
+  placeholder?: string;
+  value?: string;
+  label?: string;
 }
 
 export interface IFieldLabel {
   id?: number;
   name: string;
-  type?: string;
+  type: string;
   icon: React.ReactElement;
 }
 
