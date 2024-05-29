@@ -6,7 +6,6 @@ import { useContext } from "react";
 export default function FormCanvas() {
   const { state } = useContext(FieldContext);
   const fields = state.fields;
-  console.log("fields", fields);
 
   return (
     <div className="flex flex-col p-2 gap-2">
@@ -14,6 +13,7 @@ export default function FormCanvas() {
         {fields.map((field, index) => {
           const componentConfig = FieldMapper.getComponentConfig(field.type);
           const { component: Component, getProps } = componentConfig;
+          debugger;
 
           const props = getProps(field);
 

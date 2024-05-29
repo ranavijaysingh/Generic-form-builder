@@ -1,7 +1,6 @@
 import { IFieldLabel } from "@/types/fieldTypes";
 import FieldContext from "@/context/fieldsContext";
 import { useContext } from "react";
-import { FaWineGlassEmpty } from "react-icons/fa6";
 
 export default function FieldLabel(props: IFieldLabel) {
   const { type, name, icon } = props;
