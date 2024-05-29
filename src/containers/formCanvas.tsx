@@ -13,7 +13,6 @@ export default function FormCanvas() {
         {fields.map((field, index) => {
           const componentConfig = FieldMapper.getComponentConfig(field.type);
           const { component: Component, getProps } = componentConfig;
-          debugger;
 
           const props = getProps(field);
 
