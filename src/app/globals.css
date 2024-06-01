@@ -48,7 +48,6 @@ body {
 }
 .builderToolbarBottomBorder{
   border-bottom: 1px solid gray;
-  margin-bottom: 19px;
 }
 .sidetoolbarGrid{
   display: grid;
