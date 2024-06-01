@@ -1,6 +1,6 @@
 import BuilderToolbar from "@/containers/builderToolbar";
-import FieldsList from "@/containers/FieldsList";
-import FormCanvas from "@/containers/formCanvas";
+import FieldsList from "@/containers/fieldsList";
+// import FormCanvas from "@/containers/formCanvas";
 
 export default function Builder() {
   return (
@@ -12,7 +12,7 @@ export default function Builder() {
       <div className="flex">
         <div className="flex">
           <FieldsList />
-          <FormCanvas />
+          {/* <FormCanvas /> */}
         </div>
       </div>
     </div>

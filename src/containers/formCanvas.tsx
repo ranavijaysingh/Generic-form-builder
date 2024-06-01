@@ -8,7 +8,7 @@ export default function FormCanvas() {
 
   return (
     <div className="flex flex-col p-2 gap-2">
-      <div>{fields.map((field) => field.name)}</div>
+      {/* <div>{fields.map((field) => field.name)}</div> */}
     </div>
   );
 }

@@ -24,6 +24,7 @@ export default function BuildLayout(props: IBuildProps) {
               text={"New Form"}
               btnType="closed"
               onClick={props?.onClick}
+              active={false}
             ></Button>
           </div>
           <hr></hr>
@@ -34,8 +35,8 @@ export default function BuildLayout(props: IBuildProps) {
       {props.state == 2 && (
         <>
           <div className="btnGroup">
-            <Button text="Create from SCRATCH |" btnType="open" />
-            <Button text="USE TEMPLATES" btnType="open" />
+            <Button text="Create from SCRATCH |" btnType="open" active={false}/>
+            <Button text="USE TEMPLATES" btnType="open" active={false}/>
           </div>
           <hr></hr>
           <FormTemplate isFormType={isFormType} setIsFormType={setIsFormType} />

@@ -1,7 +1,6 @@
 import { IFieldLabel } from "@/types/fieldTypes";
 import FieldContext from "@/context/fieldsContext";
 import { useContext } from "react";
-import { FaWineGlassEmpty } from "react-icons/fa6";
 
 export default function FieldLabel(props: IFieldLabel) {
   const { id, type, name, icon } = props;
@@ -19,7 +18,7 @@ export default function FieldLabel(props: IFieldLabel) {
   };
   return (
     <div
-      className="border-solid border-2 border-sky-500 p-2 flex gap-2 items-center m-2 cursor-pointer"
+      className="flex items-center p-2 border border-zinc-300 dark:border-zinc-700 rounded-lg text-zinc-900 dark:text-zinc-100"
       onClick={handleAddForm}
     >
       {icon} {name}

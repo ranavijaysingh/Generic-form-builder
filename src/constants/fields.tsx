@@ -39,4 +39,88 @@ export const fields = [
     type: "text",
     icon: <AiOutlinePicCenter />,
   },
+  {
+    id: 7,
+    name: "Phone",
+    type: "Number",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 8,
+    name: "Email",
+    type: "email",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 9,
+    name: "Date",
+    type: "date",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 10,
+    name: "Time",
+    type: "time",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 11,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 12,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 13,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 14,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 15,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 16,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 17,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 18,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 19,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  },
+  {
+    id: 20,
+    name: "",
+    type: "",
+    icon: <AiOutlinePicCenter />,
+  }
 ];

@@ -1,4 +1,4 @@
-import { IButtonProps } from "@/types";
+import { IButtonProps } from "@/types/formsTypes";
 import BuilderToolbar from "@/containers/builderToolbar";
 
 export function btnTypeDecide(props: IButtonProps) {
