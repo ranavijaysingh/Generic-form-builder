@@ -5,13 +5,13 @@ import { AiOutlineHome, AiFillEye } from "react-icons/ai";
 
 export default function BuilderToolbar() {
   return (
-    <div className="border-b-[1px_solid_gray]">
-      <div className="bg-[#adadad] p-2 flex items-center justify-between">
+    <div className="border-b-[#8c8c8c] border-b-2">
+      <div className="bg-[#d9d9d9] p-2 flex items-center justify-between">
         <div className="flex item s-center space-x-4">
           <button className="p-2">
             <AiOutlineHome className="text-2xl" />
           </button>
-          <button className="bg-zinc-500 text-white px-4 py-2 rounded">
+          <button className="bg-black text-white px-4 py-2 rounded">
             Builder
           </button>
           <button className="px-4 py-2">Import</button>

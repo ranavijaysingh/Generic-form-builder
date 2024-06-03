@@ -15,10 +15,10 @@ export default function FieldLabel(props: IFieldLabel) {
   };
   return (
     <div
-      className="border-solid border-2 border-sky-500 p-2 flex gap-2 items-center m-2 cursor-pointer"
+      className="flex items-center p-2 border border-zinc-300 rounded-lg text-zinc-900 cursor-pointer w-40"
       onClick={handleAddForm}
     >
-      {icon} {name}
+      {icon} <p className="ml-2">{name}</p>
     </div>
   );
 }
