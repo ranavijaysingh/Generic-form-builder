@@ -7,8 +7,17 @@ export default function FormCanvas() {
   const fields = state.fields;
 
   return (
-    <div className="flex flex-col p-2 gap-2">
-      <div>{fields.map((field) => field.name)}</div>
+    <div className="flex flex-col p-2 gap-2 shadow-xl border-cyan-700 border-2">
+      <div>
+        {fields.map((field, index) => {
+          const componentConfig = FieldMapper.getComponentConfig(field.type);
+          const { component: Component, getProps } = componentConfig;
+
+          const props = getProps(field);
+
+          return <div key={index}>{React.createElement(Component, props)}</div>;
+        })}
+      </div>
     </div>
   );
 }
