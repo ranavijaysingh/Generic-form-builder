@@ -11,7 +11,7 @@ export default function SideToolbar() {
     <div className="p-2">
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
-          <h1 className="p-3 font-bold">Basic Components</h1>
+          <h1 className="p-3 font-bold">Basic fdxComponents</h1>
           <h1 className="p-3 font-bold">Widgets</h1>
         </div>
         <div>
