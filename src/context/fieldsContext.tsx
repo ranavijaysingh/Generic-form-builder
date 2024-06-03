@@ -2,13 +2,14 @@
 
 import React, { createContext, useReducer, ReactNode } from "react";
 import { IField } from "@/types/fieldTypes";
+import { Actions } from "@/constants/actions";
 
 interface FieldState {
   fields: IField[];
 }
-
+type Actions = "ADD FIELD" | "UPDATE FIELD" | "DELETE FIELD" | "COPY FIELD";
 interface FieldAction {
-  type: "ADD_FIELD" | "UPDATE_FIELD";
+  type: Actions;
   payload: IField;
 }
 
@@ -28,6 +29,24 @@ const initialState: FieldState = {
       value: "",
       label: "First Name",
     },
+    {
+      id: 2,
+      type: "text",
+      name: "first name",
+      required: false,
+      placeholder: "Last name",
+      value: "",
+      label: "Last Name",
+    },
+    {
+      id: 3,
+      type: "text",
+      name: "first name",
+      required: false,
+      placeholder: "first name",
+      value: "",
+      label: "First Name",
+    },
   ],
 };
 
@@ -38,19 +57,47 @@ const FieldContext = createContext<FieldContextProps>({
 
 const fieldReducer = (state: FieldState, action: FieldAction): FieldState => {
   switch (action.type) {
-    case "ADD_FIELD":
+    case Actions.ADD_FIELD:
       const newId = state.fields.length + 1;
       return {
         ...state,
         fields: [...state.fields, { id: newId, ...action.payload }],
       };
-    case "UPDATE_FIELD":
+    case Actions.UPDATE_FIELD:
       return {
         ...state,
         fields: state.fields.map((field) =>
           field.id === action.payload.id ? action.payload : field
         ),
       };
+    case Actions.DELETE_FIELD:
+      return {
+        ...state,
+        fields: state.fields.filter((field) => field.id !== action.payload.id),
+      };
+    case Actions.COPY_FIELD:
+      // NEED TO BE FIXED
+      const index = state.fields.findIndex(
+        (field) => field.id === action.payload.id
+      );
+      if (index === -1) return state;
+
+      const copiedField = {
+        ...state.fields[index],
+        id: state.fields.length + 1,
+      };
+
+      const newFields = {
+        ...state.fields.slice(0, index + 1),
+        copiedField,
+        ...state.fields.slice(index + 1),
+      };
+
+      return {
+        ...state,
+        fields: newFields,
+      };
+
     default:
       return state;
   }

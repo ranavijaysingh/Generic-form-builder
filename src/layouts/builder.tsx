@@ -13,7 +13,7 @@ export default function Builder() {
         <div className=" flex items-center w-[30%]">
           <FieldsList />
         </div>
-        <div className="flex items-center shadow-xl w-[40%] mt-4 ml-40">
+        <div className="flex items-center shadow-xl mt-4 ml-40 w-[630px]">
           <Canvas />
         </div>
       </div>

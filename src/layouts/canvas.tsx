@@ -1,5 +1,5 @@
 import React from "react";
-import FormRenderer from "@/components/common/formRenderer";
+import FormRenderer from "@/layouts/formRenderer";
 
 export default function Canvas() {
   return (
@@ -8,7 +8,7 @@ export default function Canvas() {
         <div className=" border-b-[#8c8c8c] border-b-2">
           <h1 className="text-black text-lg font-bold p-2 ml-3">Form 1</h1>
         </div>
-        <FormRenderer />
+        <FormRenderer showToolTip={true} />
       </div>
     </div>
   );
