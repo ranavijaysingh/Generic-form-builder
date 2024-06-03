@@ -3,12 +3,12 @@ import FieldContext from "@/context/fieldsContext";
 import FieldMapper from "@/utils/fieldMapper";
 import { useContext } from "react";
 
-export default function FormCanvas() {
+export default function FormRenderer() {
   const { state } = useContext(FieldContext);
   const fields = state.fields;
 
   return (
-    <div className="flex flex-col p-2 gap-2">
+    <div className="flex flex-col py-2 gap-2">
       <div>
         {fields.map((field, index) => {
           const componentConfig = FieldMapper.getComponentConfig(field.type);
@@ -16,7 +16,13 @@ export default function FormCanvas() {
 
           const props = getProps(field);
 
-          return <div key={index}>{React.createElement(Component, props)}</div>;
+          return (
+            <div className="border-l-4 border-l-black" key={index}>
+              <div className="mx-2">
+                {React.createElement(Component, props)}
+              </div>
+            </div>
+          );
         })}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import BuilderToolbar from "@/containers/builderToolbar";
 import FieldsList from "@/containers/fieldsList";
-import FormCanvas from "@/containers/formCanvas";
+import Canvas from "./canvas";
 
 export default function Builder() {
   return (
@@ -10,11 +10,11 @@ export default function Builder() {
         <BuilderToolbar />
       </div>
       <div className="flex w-full relative bg-[#d9d9d9]">
-        <div className="absolute flex items-center left-0 w-[30%]">
+        <div className=" flex items-center w-[30%]">
           <FieldsList />
         </div>
-        <div className="flex items-center shadow-xl absolute top-2/4 left-2/4">
-          <FormCanvas />
+        <div className="flex items-center shadow-xl w-[40%] mt-4 ml-40">
+          <Canvas />
         </div>
       </div>
     </div>

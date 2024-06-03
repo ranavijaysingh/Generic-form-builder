@@ -35,8 +35,12 @@ export default function BuildLayout(props: IBuildProps) {
       {props.state == 2 && (
         <>
           <div className="btnGroup">
-            <Button text="Create from SCRATCH |" btnType="open" active={false}/>
-            <Button text="USE TEMPLATES" btnType="open" active={false}/>
+            <Button
+              text="Create from SCRATCH |"
+              btnType="open"
+              active={false}
+            />
+            <Button text="USE TEMPLATES" btnType="open" active={false} />
           </div>
           <hr></hr>
           <FormTemplate isFormType={isFormType} setIsFormType={setIsFormType} />
