@@ -1,8 +1,8 @@
 export default function Navbar() {
   return (
-    <div className="bg-gray-400 p-4">
+    <div className="bg-[#d9d9d9] p-4">
       <div className="flex justify-between items-center">
-        <div className="text-white font-semibold">Form Builder</div>
+        <div className="text-black font-semibold">Form Builder</div>
         <div className="flex items-center">
           <button className="ml-2 p-2 rounded-full bg-zinc-700 hover:bg-zinc-600">
             <svg

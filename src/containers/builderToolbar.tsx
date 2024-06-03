@@ -1,18 +1,15 @@
 import Button from "@/components/common/button";
 import { BuilderToolbarData } from "@/mockData";
 
+import { AiOutlineHome, AiFillEye } from "react-icons/ai";
+
 export default function BuilderToolbar() {
   return (
-    <div className="builderToolbarBottomBorder">
-      {/* equivalent styling  border-b border-gray-500 not applying so applied in global */}
-      <div className="bg-gray-400 dark:bg-zinc-800 p-2 flex items-center justify-between">
+    <div className="border-b-[#8c8c8c] border-b-2">
+      <div className="bg-[#d9d9d9] p-2 flex items-center justify-between">
         <div className="flex item s-center space-x-4">
           <button className="p-2">
-            <img
-              src="https://placehold.co/24x24"
-              alt="home"
-              className="w-6 h-6"
-            />
+            <AiOutlineHome className="text-2xl" />
           </button>
           <button className="bg-black text-white px-4 py-2 rounded">
             Builder
@@ -25,12 +22,8 @@ export default function BuilderToolbar() {
           <button className="px-4 py-2">Clear</button>
         </div>
         <div className="flex items-center space-x-2">
-          <button className="p-2">
-            <img
-              src="https://placehold.co/24x24"
-              alt="view"
-              className="w-6 h-6"
-            />
+          <button className="border-2 px-2 rounded bg-white border-slate-50">
+            <AiFillEye className="text-3xl" />
           </button>
           <button className="bg-black text-white px-4 py-2 rounded">
             Share

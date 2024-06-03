@@ -3,37 +3,51 @@ import FieldLabel from "@/components/common/fieldLabel";
 import { useState } from "react";
 import { IFieldLabel } from "@/types/fieldTypes";
 
-export default function FieldsList() 
-{
+export default function FieldsList() {
+  const [active, setActive] = useState(0);
   const [fields, setFields] = useState<IFieldLabel[]>(initialFields);
-  const [step, setStep] = useState<number>(0);
 
-  const chooseBaseWidget = (clickedBtn: number) =>{
-    setStep(clickedBtn) 
-  }
+  const chooseBaseWidget = (clickedBtn: number) => {
+    setActive(clickedBtn);
+  };
 
-  const mapBasicComponent = () =>{
-    return(<div  className="sidetoolbarGrid grid grid-cols-2 mt-2 gap-2">
-          {fields.map((field, index) => (
-              <FieldLabel
-              name={field.name}
-              type={field.type}
-              icon={field.icon}
-              key={index}
-            />
-          ))}
-        </div>
-  )}
+  const mapBasicComponent = () => {
+    return (
+      <div className="flex gap-2 flex-wrap p-4 bg-[#e9e9e9]">
+        {fields.map((field, index) => (
+          <FieldLabel
+            name={field.name}
+            type={field.type}
+            icon={field.icon}
+            key={index}
+          />
+        ))}
+      </div>
+    );
+  };
 
   return (
-        // className="flex flex-col w-full max-w-md mx-auto bg-zinc-100  p-4 rounded-lg shadow-md"
-      <div className="grid grid-cols-2 gap-2 h-screen fieldListSidetoolbar">
-          <div className="bg-gray-400 p-4 flex sidetoolbar-topButton">
-            <button className="p-3 font-bold" onClick={() => chooseBaseWidget(0)}>Basic Components</button>
-            <span>|</span>
-            <button onClick={() => chooseBaseWidget(1)}>Widgets</button>
-          </div>
-            {step==0 ? mapBasicComponent(): <div>widget</div>}
+    <div className="flex flex-col h-full border-[1px] border-[solid] border-[lightgray] [box-shadow:0_0_10px_lightgray]">
+      <div className="bg-[#d9d9d9] flex px-6 items-center justify-center">
+        <button
+          className={`p-4 font-bold cursor-pointer border-b-8 border-[#d9d9d9]] ${
+            active === 0 ? "border-b-8 !border-black" : ""
+          }`}
+          onClick={() => chooseBaseWidget(0)}
+        >
+          Basic Components
+        </button>
+        <span className="p-5">|</span>
+        <button
+          className={`p-4 font-bold cursor-pointer border-b-8 border-[#d9d9d9] ${
+            active === 1 ? "border-b-8 !border-black" : ""
+          }`}
+          onClick={() => chooseBaseWidget(1)}
+        >
+          Widgets
+        </button>
+      </div>
+      {active === 0 ? mapBasicComponent() : <div>widget</div>}
     </div>
   );
 }

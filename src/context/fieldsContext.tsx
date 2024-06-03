@@ -26,6 +26,7 @@ const initialState: FieldState = {
       required: false,
       placeholder: "first name",
       value: "",
+      label: "First Name",
     },
   ],
 };
@@ -38,13 +39,17 @@ const FieldContext = createContext<FieldContextProps>({
 const fieldReducer = (state: FieldState, action: FieldAction): FieldState => {
   switch (action.type) {
     case "ADD_FIELD":
-      return { ...state, fields: [...state.fields, action.payload] };
+      const newId = state.fields.length + 1;
+      return {
+        ...state,
+        fields: [...state.fields, { id: newId, ...action.payload }],
+      };
     case "UPDATE_FIELD":
       return {
-            ...state,
-            fields: state.fields.map((field) =>
-            field.id === action.payload.id ? action.payload : field
-            ),
+        ...state,
+        fields: state.fields.map((field) =>
+          field.id === action.payload.id ? action.payload : field
+        ),
       };
     default:
       return state;
@@ -53,6 +58,7 @@ const fieldReducer = (state: FieldState, action: FieldAction): FieldState => {
 
 export const FieldProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(fieldReducer, initialState);
+  console.log(state);
 
   return (
     <FieldContext.Provider value={{ state, dispatch }}>

@@ -17,14 +17,8 @@
 }
 
 body {
-
-  background: var(--foreground-rgb); 
+  background: var(--foreground-rgb);
 }
-
-.sidetoolbar-topButton{
-  justify-content: space-around;
-}
-
 
 @layer utilities {
   .text-balance {
@@ -32,13 +26,12 @@ body {
   }
 }
 
-.btnGroup{
+.btnGroup {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
-.dot{
+.dot {
   width: 20px;
   height: 20px;
   background-color: #bbb;
@@ -46,21 +39,4 @@ body {
   display: inline-block;
   float: inline-end;
   margin: 7px;
-}
-.builderHeader{
-  background-color: 	#ADADAD;
-}
-.builderToolbarBottomBorder{
-  border-bottom: 1px solid gray;
-}
-.sidetoolbarGrid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
-  margin-right: 0.5rem;
-  
-}
-.fieldListSidetoolbar{
-  border: 1px solid lightgray;
-  box-shadow: 0 0 10px lightgray; 
 }

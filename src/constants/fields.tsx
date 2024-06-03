@@ -1,7 +1,8 @@
+import { IFieldLabel } from "@/types/fieldTypes";
 import { AiOutlinePicCenter } from "react-icons/ai";
 import { FiAlignJustify } from "react-icons/fi";
 
-export const fields = [
+export const fields: IFieldLabel[] = [
   {
     id: 1,
     name: "Single Line",
@@ -11,7 +12,7 @@ export const fields = [
   {
     id: 2,
     name: "Multi Line",
-    type: "multiText",
+    type: "multilineText",
     icon: <FiAlignJustify />,
   },
 
