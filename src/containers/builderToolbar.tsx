@@ -5,7 +5,7 @@ export default function BuilderToolbar() {
   return (
     <div className="builderToolbarBottomBorder">
       {/* equivalent styling  border-b border-gray-500 not applying so applied in global */}
-      <div className="bg-zinc-200 dark:bg-zinc-800 p-2 flex items-center justify-between">
+      <div className="bg-gray-400 dark:bg-zinc-800 p-2 flex items-center justify-between">
         <div className="flex item s-center space-x-4">
           <button className="p-2">
             <img
@@ -14,7 +14,7 @@ export default function BuilderToolbar() {
               className="w-6 h-6"
             />
           </button>
-          <button className="bg-zinc-500 text-white px-4 py-2 rounded">
+          <button className="bg-black text-white px-4 py-2 rounded">
             Builder
           </button>
           <button className="px-4 py-2">Import</button>

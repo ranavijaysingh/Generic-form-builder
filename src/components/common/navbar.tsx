@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="bg-zinc-800 p-4">
+    <div className="bg-gray-400 p-4">
       <div className="flex justify-between items-center">
         <div className="text-white font-semibold">Form Builder</div>
         <div className="flex items-center">
