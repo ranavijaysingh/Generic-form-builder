@@ -3,3 +3,10 @@ export interface IForms {
   name: string;
   modifiedDate: string;
 }
+
+export interface IButtonProps {
+  text: string;
+  onClick?: () => void;
+  btnType: string,
+  active: boolean
+}

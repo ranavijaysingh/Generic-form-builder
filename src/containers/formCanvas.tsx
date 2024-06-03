@@ -1,5 +1,6 @@
-import Text from "@/components/fields/text";
+import React from "react";
 import FieldContext from "@/context/fieldsContext";
+import FieldMapper from "@/utils/fieldMapper";
 import { useContext } from "react";
 
 export default function FormCanvas() {
@@ -7,7 +8,7 @@ export default function FormCanvas() {
   const fields = state.fields;
 
   return (
-    <div className="flex flex-col p-2 gap-2 shadow-xl border-cyan-700 border-2">
+    <div className="flex flex-col p-2 gap-2">
       <div>
         {fields.map((field, index) => {
           const componentConfig = FieldMapper.getComponentConfig(field.type);

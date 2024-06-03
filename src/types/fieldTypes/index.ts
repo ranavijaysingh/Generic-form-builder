@@ -1,16 +1,19 @@
+type fieldTypes = "text" | "multilineText" | "number";
+
 export interface IField {
   id?: number;
-  type: string;
+  type: fieldTypes;
   name: string;
-  required: boolean;
-  placeholder: string;
-  value: string;
+  required?: boolean;
+  placeholder?: string;
+  value?: string;
+  label?: string;
 }
 
 export interface IFieldLabel {
   id?: number;
   name: string;
-  type?: string;
+  type: fieldTypes;
   icon: React.ReactElement;
 }
 

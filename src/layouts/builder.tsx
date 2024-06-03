@@ -1,12 +1,11 @@
 import BuilderToolbar from "@/containers/builderToolbar";
-import FieldsList from "@/containers/FieldsList";
+import FieldsList from "@/containers/fieldsList";
 import FormCanvas from "@/containers/formCanvas";
 
 export default function Builder() {
   return (
     <div className="flex flex-col w-full ">
-      <div
-        className=" mt-2 w-full">
+      <div className=" mt-2 w-full">
         {/* when changed margin-top to 4, it removes the margin-top altogether */}
         <BuilderToolbar />
       </div>
