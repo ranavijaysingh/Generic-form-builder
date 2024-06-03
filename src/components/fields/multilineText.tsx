@@ -1,14 +1,14 @@
 import React from "react";
 import { ITextField } from "@/types/fieldTypes";
 
-export default function Text(props: ITextField) {
+export default function MultilineText(props: ITextField) {
   const { label, placeholder, onChange } = props;
 
   return (
     <div>
       <label className="flex flex-col gap-2">
         {label}
-        <input type={"text"} placeholder={placeholder} onChange={onChange} />
+        <textarea placeholder={placeholder} onChange={onChange} />
       </label>
     </div>
   );
