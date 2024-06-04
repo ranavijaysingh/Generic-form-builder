@@ -1,0 +1,6 @@
+export const Actions = {
+  ADD_FIELD: "ADD FIELD",
+  UPDATE_FIELD: "UPDATE FIELD",
+  COPY_FIELD: "COPY FIELD",
+  DELETE_FIELD: "DELETE FIELD",
+};

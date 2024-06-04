@@ -1,6 +1,7 @@
 import { IFieldLabel } from "@/types/fieldTypes";
 import FieldContext from "@/context/fieldsContext";
 import { useContext } from "react";
+import { Actions } from "@/constants/actions";
 
 export default function FieldLabel(props: IFieldLabel) {
   const { type, name, icon } = props;
@@ -8,10 +9,12 @@ export default function FieldLabel(props: IFieldLabel) {
 
   const handleAddForm = () => {
     const field = {
+      label: name,
+      placeholder: name,
       type: type,
       name: name,
     };
-    dispatch({ type: "ADD_FIELD", payload: field });
+    dispatch({ type: "ADD FIELD", payload: field });
   };
   return (
     <div
