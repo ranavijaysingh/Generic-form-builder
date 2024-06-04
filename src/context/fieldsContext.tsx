@@ -40,12 +40,12 @@ const initialState: FieldState = {
     },
     {
       id: 3,
-      type: "text",
-      name: "first name",
+      type: "multilineText",
+      name: "Address",
       required: false,
-      placeholder: "first name",
+      placeholder: "Address",
       value: "",
-      label: "First Name",
+      label: "Address",
     },
   ],
 };
@@ -87,6 +87,7 @@ const fieldReducer = (state: FieldState, action: FieldAction): FieldState => {
         id: state.fields.length + 1,
       };
 
+      // Need To Fix this
       const newFields = {
         ...state.fields.slice(0, index + 1),
         copiedField,

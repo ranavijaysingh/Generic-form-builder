@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FieldContext from "@/context/fieldsContext";
 import FieldMapper from "@/utils/fieldMapper";
 import { useContext } from "react";
@@ -8,6 +8,9 @@ import {
   AiOutlineDelete,
 } from "react-icons/ai";
 import ToolTip from "@/components/common/toolTip";
+import { Modal } from "antd";
+import { IField } from "@/types/fieldTypes";
+import FieldSettings from "./fieldSettings";
 
 interface IFormRendererProps {
   showToolTip: boolean;
@@ -17,18 +20,30 @@ export default function FormRenderer(props: IFormRendererProps) {
   const { showToolTip } = props;
   const { dispatch, state } = useContext(FieldContext);
   const fields = state.fields;
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalField, setModalField] = useState<IField>();
+
+  const handleModalOpen = (field: IField) => {
+    setModalField(field);
+    setIsModalVisible(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalVisible(false);
+  };
 
   return (
     <div className="flex flex-col py-2 gap-2">
       {fields.map((field, index) => {
         const componentConfig = FieldMapper.getComponentConfig(field.type);
-        const { component: Component, getProps } = componentConfig;  
+        const { component: Component, getProps } = componentConfig;
 
         const props = getProps(field);
 
         const handleToolTipClick = (tool: string) => {
           switch (tool) {
             case "settings":
+              handleModalOpen(field);
               break;
             case "copy":
               dispatch({ type: "COPY FIELD", payload: field });
@@ -37,6 +52,7 @@ export default function FormRenderer(props: IFormRendererProps) {
               dispatch({ type: "DELETE FIELD", payload: field });
               break;
             default:
+              break;
           }
         };
 
@@ -69,6 +85,20 @@ export default function FormRenderer(props: IFormRendererProps) {
           </div>
         );
       })}
+      <Modal
+        className="bg-[#e9e9e9]"
+        open={isModalVisible}
+        onCancel={handleModalClose}
+        footer={null}
+        style={{ background: "#e9e9e9" }}
+        width="80%"
+        bodyStyle={{ background: "#e9e9e9" }}
+        closable={false}
+      >
+        <div className="bg-[#e9e9e9]">
+          {modalField && <FieldSettings field={modalField} />}
+        </div>
+      </Modal>
     </div>
   );
 }
