@@ -10,7 +10,7 @@ import {
 import ToolTip from "@/components/common/toolTip";
 import { Modal } from "antd";
 import { IField } from "@/types/fieldTypes";
-import FieldSettings from "./fieldSettings";
+import FieldSettings from "./settings/fieldSettings";
 
 interface IFormRendererProps {
   showToolTip: boolean;
@@ -92,7 +92,6 @@ export default function FormRenderer(props: IFormRendererProps) {
         footer={null}
         style={{ background: "#e9e9e9" }}
         width="80%"
-        bodyStyle={{ background: "#e9e9e9" }}
         closable={false}
       >
         <div className="bg-[#e9e9e9]">
