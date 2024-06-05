@@ -123,5 +123,5 @@ export const fields: IFieldLabel[] = [
     name: "Radio",
     type: "",
     icon: <AiOutlinePicCenter />,
-  }
+  },
 ];
