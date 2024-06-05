@@ -87,16 +87,14 @@ const fieldReducer = (state: FieldState, action: FieldAction): FieldState => {
         id: state.fields.length + 1,
       };
 
-      // Need To Fix this
-      const newFields = {
-        ...state.fields.slice(0, index + 1),
-        copiedField,
-        ...state.fields.slice(index + 1),
-      };
+      const firstArray = state.fields.slice(0, index + 1);
+      const secondArray = state.fields.slice(index + 1);
+
+      let newArr = firstArray.concat(copiedField, secondArray);
 
       return {
         ...state,
-        fields: newFields,
+        fields: newArr,
       };
 
     default:
