@@ -14,14 +14,14 @@ export default function RadioGroup(props: IRadioGroupProps) {
 
   return (
     <div>
-      <p className=" text-2xl text-[#363636] mb-2">{label}</p>
+      <p className="block text-zinc-700">{label}</p>
       <Radio.Group
         onChange={onChange}
         value={value}
         defaultValue={defaultValue}
       >
         {options.map((option) => (
-          <Radio value={option.value}>{option.label}</Radio>
+          <Radio.Button  value={option.value} className="px-4 hover:bg-zinc-400 hover:text-white">{option.label}</Radio.Button>
         ))}
       </Radio.Group>
     </div>

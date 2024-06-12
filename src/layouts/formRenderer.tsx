@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import FieldContext from "@/context/fieldsContext";
+import './modalStyles.css';
+
 import FieldMapper from "@/utils/fieldMapper";
 import { useContext } from "react";
 import {
@@ -11,6 +13,9 @@ import ToolTip from "@/components/common/toolTip";
 import { Modal } from "antd";
 import { IField } from "@/types/fieldTypes";
 import FieldSettings from "./settings/fieldSettings";
+import ModalHeader from "@/components/common/modalHeader";
+import ModalFooter from "@/components/common/modalFooter";
+
 
 interface IFormRendererProps {
   showToolTip: boolean;
@@ -57,7 +62,7 @@ export default function FormRenderer(props: IFormRendererProps) {
         };
 
         return (
-          <div className="hover:border-l-4 border-l-black " key={index}>
+          <div className="hover:border-l-4 border-l-black shadow-3xl background-testings" key={index}>
             <div className="mx-2 flex">
               <div className="flex w-full mr-2">
                 {React.createElement(Component, props)}
@@ -86,17 +91,20 @@ export default function FormRenderer(props: IFormRendererProps) {
         );
       })}
       <Modal
-        className="bg-[#e9e9e9]"
         open={isModalVisible}
         onCancel={handleModalClose}
         footer={null}
-        style={{ background: "#e9e9e9" }}
         width="80%"
+        className="myStyle p-0 rounded-none custom-modal"
         closable={false}
+        mask={true}
+        styles={{header:{padding:0, borderRadius:0, backgroundColor:'#FF0000'}, body:{padding:0, borderRadius:0}}}
       >
-        <div className="bg-[#e9e9e9]">
+        <ModalHeader />
+        <div className="p-2">
           {modalField && <FieldSettings field={modalField} />}
         </div>
+        <ModalFooter />
       </Modal>
     </div>
   );

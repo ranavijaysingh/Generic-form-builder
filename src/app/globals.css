@@ -40,3 +40,8 @@ body {
   float: inline-end;
   margin: 7px;
 }
+.myStyle{
+  height: 100%;
+  padding: 0px;
+  border-radius: 0px;
+}
