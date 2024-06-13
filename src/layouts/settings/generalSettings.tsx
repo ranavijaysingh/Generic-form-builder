@@ -24,8 +24,12 @@ export default function GeneralSettings() {
     <div>
       <InputField onChange={handleChange} label="Field Label" />
       <div className="flex my-2">
-        <Radio />
-        <p>Hide Field Label</p>
+        <div className="mt-2">
+          <label className="inline-flex items-center">
+              <input type="checkbox" className="form-checkbox" />
+              <span className="ml-2 text-zinc-700">Hide Field Label</span>
+            </label>
+        </div>
       </div>
       <InputField onChange={handleChange} label="Placeholder" />
       <Select

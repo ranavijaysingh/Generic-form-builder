@@ -11,6 +11,15 @@ export default function FieldSettings(props: IFieldSettingsProps) {
   const { field } = props;
 
   return (
-    <div className="bg-[#e9e9e9]">{activeTab === 0 && <GeneralSettings />}</div>
+    <div className="flex">
+      <div className="w-3/5 border-r-2">
+        {activeTab === 0 && <GeneralSettings />}
+      </div>
+      <div className="w-2/5 p-4">
+        <div className="h-full flex items-center justify-center bg-zinc-200 border rounded">
+          <span className="text-zinc-700">Preview</span>
+        </div>
+      </div>
+    </div>
   );
 }
