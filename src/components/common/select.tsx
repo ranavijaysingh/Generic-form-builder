@@ -13,10 +13,10 @@ export default function Select(props: ISelectProps) {
   const { options, defaultValue, onChange, label, placeholder } = props;
 
   return (
-    <div className="max-w-[614px]">
-      <p className=" text-2xl text-[#363636] mb-2">{label}</p>
+    <div className="max-w-[614px] mt-2">
+      <p className="block text-zinc-700">{label}</p>
       <AntSelect
-        className=" rounded-sm border-[#878787] border-2 h-[40px] text-lg w-full"
+        className=" h-[38px] text-lg w-2/3"
         defaultValue={defaultValue}
         options={options}
         onChange={onChange}

@@ -15,13 +15,13 @@ export default function InputField(props: IInputFieldProps) {
   };
 
   return (
-    <form className="flex flex-col max-w-[614px] bg-[#E9E9E9]">
-      <label className=" text-2xl text-[#363636] mb-2">{label}</label>
+    <form className="flex flex-col max-w-[614px]">
+      <label className="block text-zinc-700">{label}</label>
       <input
         type="text"
         width={"100%"}
         value={value}
-        className=" rounded-sm border-[#878787] border-2 h-[40px] text-lg"
+        className="w-full p-2 border rounded"
         onChange={handleChange}
       />
     </form>

@@ -1,0 +1,19 @@
+.custom-modal {
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .custom-modal .ant-modal-header  {
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .custom-modal .ant-modal-content  {
+    padding: 0px !important;
+    border-radius: 0 !important;
+  }
+
+  .custom-modal .ant-modal-body {
+    padding: 0px 0px !important;
+    border-radius: 0 !important;
+  }
